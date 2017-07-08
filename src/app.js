@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 // gets all the common components imported in one line via the index file and tweaks to the export of each of those components
 import firebase from 'firebase';
-import { Header, Button, Spinner } from './components/common';
+import { Header, CardSection, Button, Spinner } from './components/common';
 import LoginForm from './components/LoginForm';
 
 
@@ -45,7 +45,9 @@ class App extends Component {
     return (
       <View>
         <Header headerText="Authentication" />
-        {this.renderContent()}
+        <CardSection>
+          {this.renderContent()}
+        </CardSection>
       </View>
     );
   }
